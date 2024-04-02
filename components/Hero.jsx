@@ -64,7 +64,7 @@ const Hero = () => {
                          />
                          {/* Mudar as Imagens */}
                         <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
-                        <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc='/hero/developer.png'/>
+                        <DevImg containerStyles="bg-hero_shape w-[450px] h-[450px] bg-no-repeat relative bg-bottom rounded-full overflow-hidden" imgSrc='/hero/developer.jpeg'/>
                     </div>
                 </div>
                 {/*Icon*/}

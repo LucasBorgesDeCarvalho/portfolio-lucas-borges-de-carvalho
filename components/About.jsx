@@ -87,22 +87,34 @@ const skillData = [
         title: 'skills',
         data: [
             {
-                name: 'HTML, CSS',
+                name: 'Front-End Development',
             },
             {
-                name: 'Front-End Development',
+                name: 'HTML, CSS',
             },
             {
                 name: 'JavaScript, Node.js',
             },
             {
-                name: 'React, Tailwind ui',
+                name: 'React, Tailwind CSS',
             },
             {
                 name: 'FIGMA, CANVA',
             },
             {
                 name: 'Java, MySQL',
+            },
+            {
+                name: 'NOTION, Python',
+            },
+            {
+                name: 'Next.js, Shadcn UI',
+            },
+            {
+                name: 'Android, Kotlin',
+            },
+            {
+                name: 'React-Native, Git/Github',
             },
         ]
     },
@@ -238,7 +250,43 @@ const About = () => {
                                 {/*Skills*/}
                                 <TabsContent value='skills'>
                                     <div className="text-center xl:text-left">
-                                        <h3 className="h3 mb-8">Tools I Use Everyday</h3>
+                                        <h3 className="h3 mb-8">What I Use Everyday</h3>
+                                        {/*skills*/}
+                                        <div className="mb-16">
+                                            <h4 className="text-xl font-semibold mb-2">Skills</h4>
+                                            <div className="border-b border-border mb-4"></div>
+                                            {/*skill list*/}
+                                            <div>
+                                                {getData(skillData, 'skills').data.map(
+                                                    (item, index) => {
+                                                        const {name} = item;
+                                                        return <div className="w-2/4 text-center xl:text-left mx-auto xl:mx-0" key={index}>
+                                                            <div className="font-medium">{name}</div>
+                                                        </div>   
+                                                        }
+                                                    )}
+                                            </div>
+                                        </div>
+                                        {/*tools*/}
+                                        <div>
+                                            <h4 className="text-xl font-semibold mb-2 xl:text-left">Tools</h4>
+                                            <div className="border-b border-border mb-4"></div>
+                                            {/*tool list*/}
+                                            <div className="flex gap-x-8 justify-center xl:justify-start">
+                                                {getData(skillData, 'tools').data.map((item, index) => {
+                                                    const {imgPath} = item;
+                                                    return <div key={index}>
+                                                        <Image 
+                                                        src={imgPath} 
+                                                        width={48} 
+                                                        height={48} 
+                                                        alt="" 
+                                                        priority
+                                                        />
+                                                    </div>
+                                                })}
+                                            </div>
+                                        </div>
                                     </div>
                                 </TabsContent>
                             </div>
